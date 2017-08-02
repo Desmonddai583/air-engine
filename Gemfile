@@ -58,3 +58,6 @@ gem 'devise', '~> 4.2'
 gem 'jquery-rails', '~> 4.3'
 
 gem 'toastr-rails', '~> 1.0'
+
+gem 'omniauth', '~> 1.6'
+gem 'omniauth-facebook', '~> 4.0'
