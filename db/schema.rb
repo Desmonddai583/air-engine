@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802143807) do
+ActiveRecord::Schema.define(version: 20170803080415) do
+
+  create_table "photos", force: :cascade do |t|
+    t.integer "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.index ["room_id"], name: "index_photos_on_room_id"
+  end
 
   create_table "rooms", force: :cascade do |t|
     t.string "home_type"
@@ -31,6 +42,8 @@ ActiveRecord::Schema.define(version: 20170802143807) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
@@ -48,6 +61,7 @@ ActiveRecord::Schema.define(version: 20170802143807) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "fullname"
+    t.datetime "confirmation_send_at"
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
