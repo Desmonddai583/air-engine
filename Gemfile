@@ -48,6 +48,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -71,3 +72,12 @@ gem 'jquery-ui-rails', '~> 5.0'
 gem 'ransack', '~> 1.7'
 
 gem 'twilio-ruby', '~> 4.11.1'
+gem 'fullcalendar-rails', '~> 3.4.0'
+gem 'momentjs-rails', '~> 2.17.1'
+
+gem 'stripe', '~> 3.0.0'
+gem 'rails-assets-card', source: "https://rails-assets.org"
+
+gem 'omniauth-stripe-connect', '~> 2.10.0'
+
+gem 'chartkick', '~> 2.2.4'
