@@ -21,5 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2  
+  encoding: utf8
+  database: <%= ENV["AIR_ENGINE_DATABASE_NAME"] %>
+  pool: 5
+  username: <%= ENV["AIR_ENGINE_DATABASE_USERNAME"] %>
+  password: <%= ENV["AIR_ENGINE_DATABASE_PASSWORD"] %>
+  host: <%= ENV["AIR_ENGINE_DATABASE_HOST"] %>
